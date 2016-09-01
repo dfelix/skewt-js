@@ -52,7 +52,7 @@ SkewT only contains two methods:
 
 Expected array format should follow the GSD Sounding Format.
 
-```json
+```javascript
 [{
 		"press": 1000.0,  // pressure in whole millibars
 		"hght": 173.0,    // height in meters (m)
