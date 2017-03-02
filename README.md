@@ -21,20 +21,18 @@ Ensure a reference to both skewt.js and skewt.css files.
 
 ## How it works
 
-Ensure you create a div with id="skewt" in your html body.
+Ensure you create a div using a specified id (ex: id="skewt") or a specific css class.
 It will act as the diagram placeholder.
 
 ```html
-<div id="skewt"></div>
+<div id="mySkewt"></div>
 ```
 
-Declare a new var using the HTML DOM for the div placeholder.
-This will initialize the skew-t log-p lines.
+Declare a new SkewT var passing the css selector for the placeholder.
 
 ```html
 <script>
-	var skewtDiv = document.getElementById('skewt');
-	var skewt = new SkewT(skewtDiv);
+	var skewt = new SkewT('#mySkewt');
 </script>
 ```
 
@@ -42,10 +40,10 @@ SkewT only contains two methods:
 
 #### Plot
 
-.plot(array) will plot dew point and air temperature lines and wind barbs for the specified pressure.
+.plot(array) will plot dew point and air temperature lines and wind barbs.
 
 ```javascript
-  var skewt = new SkewT(skewtDiv);
+  var skewt = new SkewT('#mySkewt');
   var sounding = [];
   skewt.plot(sounding);
 ```

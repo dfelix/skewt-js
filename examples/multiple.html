@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head></head>
-  <link rel="stylesheet" type="text/css" href="../lib/skewt.css">
-  <style>
-
-textarea {
-	width: 450px;
-	height: 350px;
-	resize: none;
-}  
-  
-	.label {border: 1px solid #cccccc; margin: 2px;}
-  </style>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skew-t Examples</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../lib/skewt.css">
+	<style>
+		.btn-spc {
+			margin: 2px;
+		}
+	</style>
+  </head>
   <body>
-  	<h1>skew-t Examples</h1>
-    <div id="skewt"></div>   
-    <hr>    
-
-    <h2>Multiple Diagrams</h2>
-	<div id="listcontainer"></div>
-	<br>
-	<button onClick="loadMultiple();">load</button>
-	<button onClick="clearMultiple();">clear</button>	
-	<br>
-    <textarea id="multiple">
+    <div class="container">
+		<h2>Multiple Diagrams</h2>
+		<div class="row">			
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+					<textarea id="multiple" class="form-control" rows="20">
 [{
 	"time": 1461927600,
 	"lines": [{
@@ -1505,9 +1502,35 @@ textarea {
 		"wspd": 1.543
 	}]
 }]
-    </textarea>
-
-
+					</textarea>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<button class="btn btn-primary" onClick="loadMultiple();">load</button>
+						<button class="btn btn-primary" onClick="clearMultiple();">clear</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">				
+				<div class="row">
+					<div class="col-md-12 panel panel-default">
+						<div id="skewt"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 panel panel-default">
+						<div class="panel-body">
+							<div id="listcontainer"></div>
+						</div>	
+					</div>
+				</div>				
+				
+			</div>
+		</div>
+	</div>
+	
     <script src="../lib/skewt.min.js"  charset="UTF-8"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 	<script>
@@ -1521,18 +1544,16 @@ textarea {
 			{
 				soundings = json;
 				var listcontainer = document.getElementById('listcontainer');
-				var list = document.createElement("ul");
+				listcontainer.innerHTML = "";
 				for (var i = 0; i < soundings.length; i++) { 
-					var anchor = document.createElement("a");
+					var button = document.createElement("button");
 					var date = new Date(soundings[i].time * 1000);
 					var text = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + " UTC";
-					anchor.innerText = text;
-					anchor.href = "javascript: skewt.plot(soundings[" + i + "].lines);" ;
-					var elem = document.createElement("li");
-					elem.appendChild(anchor);
-					list.appendChild(elem);
+					button.innerText = text;
+					button.onclick = new Function("", "skewt.plot(soundings["+i+"].lines);");
+					button.className = "btn btn-default btn-sm btn-spc";
+					listcontainer.appendChild(button);
 				}	
-				listcontainer.appendChild(list);
 			}		
 		}
 		catch(err) {
@@ -1550,16 +1571,11 @@ textarea {
 		skewt.clear();
 	}
 
-
-	// skewt DIV as DOM
-	var skewtDiv = document.getElementById('skewt');
-	// create SkewT passing div element as parameter
-	var skewt = new SkewT(skewtDiv);
+	var skewt = new SkewT('#skewt');
 	
 	// array for multiple soundings example
 	var soundings = [];
 
-	</script>
-
+	</script>	
   </body>
 </html>
