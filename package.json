@@ -1,0 +1,103 @@
+{
+  "name": "skewt",
+  "version": "2.0.0",
+  "description": "Interactive Skew-T Log-P diagram for atmospheric sounding data using D3.js",
+  "author": "David Félix <dfelix@live.com.pt>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfelix/skewt-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dfelix/skewt-js/issues"
+  },
+  "homepage": "https://github.com/dfelix/skewt-js#readme",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/index.iife.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.esm.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./style.css": "./dist/skewt.css"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup && cp src/skewt.css dist/skewt.css",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "size": "size-limit",
+    "release": "npm run prepublishOnly && npm publish"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.0",
+    "d3-axis": "^3.0.0",
+    "d3-format": "^3.1.0",
+    "d3-scale": "^4.0.0",
+    "d3-selection": "^3.0.0",
+    "d3-shape": "^3.2.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.0.0",
+    "@types/d3-array": "^3.2.2",
+    "@types/d3-axis": "^3.0.6",
+    "@types/d3-format": "^3.0.4",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-shape": "^3.1.8",
+    "@vitest/coverage-v8": "^2.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^17.4.0",
+    "jsdom": "^24.0.0",
+    "prettier": "^3.2.0",
+    "size-limit": "^11.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "skew-t",
+    "skewt",
+    "sounding",
+    "meteorology",
+    "atmospheric",
+    "weather",
+    "d3",
+    "thermodynamic",
+    "diagram",
+    "wind-barb",
+    "radiosonde",
+    "upper-air"
+  ],
+  "size-limit": [
+    {
+      "path": "dist/index.esm.js",
+      "limit": "16 kB"
+    }
+  ]
+}

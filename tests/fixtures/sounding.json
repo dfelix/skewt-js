@@ -1,0 +1,23 @@
+[
+  { "press": 1000.0, "hght": 130.0, "temp": 18.5, "dwpt": 8.8, "wdir": 252.0, "wspd": 1.54 },
+  { "press": 975.0, "hght": 346.0, "temp": 16.3, "dwpt": 8.2, "wdir": 254.0, "wspd": 0.51 },
+  { "press": 950.0, "hght": 567.0, "temp": 14.5, "dwpt": 7.6, "wdir": 110.0, "wspd": 0.51 },
+  { "press": 925.0, "hght": 791.0, "temp": 12.6, "dwpt": 6.8, "wdir": 108.0, "wspd": 1.03 },
+  { "press": 900.0, "hght": 1020.0, "temp": 10.7, "dwpt": 5.8, "wdir": 118.0, "wspd": 1.54 },
+  { "press": 850.0, "hght": 1494.0, "temp": 7.5, "dwpt": 2.8, "wdir": 155.0, "wspd": 2.06 },
+  { "press": 800.0, "hght": 1991.0, "temp": 4.1, "dwpt": -0.6, "wdir": 183.0, "wspd": 2.06 },
+  { "press": 750.0, "hght": 2513.0, "temp": 0.6, "dwpt": -4.5, "wdir": 194.0, "wspd": 1.54 },
+  { "press": 700.0, "hght": 3063.0, "temp": -2.3, "dwpt": -12.0, "wdir": 187.0, "wspd": 1.03 },
+  { "press": 650.0, "hght": 3649.0, "temp": -4.9, "dwpt": -20.5, "wdir": 223.0, "wspd": 1.54 },
+  { "press": 600.0, "hght": 4273.0, "temp": -8.4, "dwpt": -28.9, "wdir": 242.0, "wspd": 3.09 },
+  { "press": 550.0, "hght": 4942.0, "temp": -13.5, "dwpt": -26.0, "wdir": 245.0, "wspd": 3.60 },
+  { "press": 500.0, "hght": 5659.0, "temp": -18.6, "dwpt": -18.6, "wdir": 236.0, "wspd": 9.26 },
+  { "press": 450.0, "hght": 6440.0, "temp": -22.1, "dwpt": -22.1, "wdir": 246.0, "wspd": 18.01 },
+  { "press": 400.0, "hght": 7296.0, "temp": -28.1, "dwpt": -28.1, "wdir": 240.0, "wspd": 24.18 },
+  { "press": 350.0, "hght": 8239.0, "temp": -35.5, "dwpt": -36.6, "wdir": 239.0, "wspd": 26.24 },
+  { "press": 300.0, "hght": 9293.0, "temp": -44.0, "dwpt": -44.8, "wdir": 239.0, "wspd": 29.84 },
+  { "press": 250.0, "hght": 10491.0, "temp": -53.1, "dwpt": -54.8, "wdir": 237.0, "wspd": 33.44 },
+  { "press": 200.0, "hght": 11904.0, "temp": -59.3, "dwpt": -65.6, "wdir": 240.0, "wspd": 31.90 },
+  { "press": 150.0, "hght": 13706.0, "temp": -58.6, "dwpt": -75.8, "wdir": 250.0, "wspd": 24.18 },
+  { "press": 100.0, "hght": 16245.0, "temp": -59.5, "dwpt": -82.5, "wdir": 260.0, "wspd": 18.52 }
+]

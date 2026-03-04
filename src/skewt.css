@@ -1,0 +1,96 @@
+/* ── Themeable custom properties ── */
+.skewt-container {
+  --skewt-temp-color: red;
+  --skewt-dwpt-color: green;
+  --skewt-grid-color: #dfdfdf;
+  --skewt-zero-color: #aaa;
+  --skewt-axis-color: #000;
+  --skewt-barb-color: #000;
+  --skewt-font-size: 13px;
+  --skewt-tooltip-font-size: 12px;
+}
+
+/* ── Axes ── */
+.skewt-axis path,
+.skewt-axis line {
+  fill: none;
+  stroke: var(--skewt-axis-color);
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.skewt-axis {
+  fill: var(--skewt-axis-color);
+  font-size: var(--skewt-font-size);
+}
+
+.skewt-axis.skewt-ticks text {
+  display: none;
+}
+
+/* ── Grid ── */
+.skewt-gridline,
+.skewt-tempzero {
+  stroke: var(--skewt-grid-color);
+  stroke-width: 0.75px;
+  fill: none;
+}
+
+.skewt-tempzero {
+  stroke: var(--skewt-zero-color);
+  stroke-width: 1.25px;
+}
+
+/* ── Data lines ── */
+.skewt-temp {
+  fill: none;
+  stroke: var(--skewt-temp-color);
+  stroke-width: 3px;
+}
+
+.skewt-dwpt {
+  fill: none;
+  stroke: var(--skewt-dwpt-color);
+  stroke-width: 3px;
+}
+
+.skewt-skline {
+  stroke-width: 1.8px;
+  opacity: 0.8;
+}
+
+.skewt-mean {
+  stroke-width: 2.5px;
+}
+
+/* ── Wind barbs ── */
+.skewt-windbarb {
+  stroke: var(--skewt-barb-color);
+  stroke-width: 0.75px;
+  fill: none;
+}
+
+.skewt-flag {
+  fill: var(--skewt-barb-color);
+}
+
+/* ── Tooltip overlay ── */
+.skewt-overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+/* ── Tooltip focus indicators ── */
+.skewt-focus.skewt-tmpc circle {
+  fill: var(--skewt-temp-color);
+  stroke: none;
+}
+
+.skewt-focus.skewt-dwpc circle {
+  fill: var(--skewt-dwpt-color);
+  stroke: none;
+}
+
+.skewt-focus text {
+  font-size: var(--skewt-tooltip-font-size);
+}
