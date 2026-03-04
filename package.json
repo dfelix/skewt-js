@@ -1,6 +1,6 @@
 {
   "name": "skewt",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Interactive Skew-T Log-P diagram for atmospheric sounding data using D3.js",
   "author": "David Félix <dfelix@live.com.pt>",
   "license": "MIT",
